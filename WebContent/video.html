@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Audio and Video</title>
+</head>
+<body>
+	<div style="text-align:center">
+		<button onclick="playvideo()">PlayVideo</button> 
+  		<button onclick="playaudio()">PlayAudio</button> 
+  		<br><br>
+  		<video id="myvideo" width="400" height="300" controls="controls">
+    			<source src="learnCricket.mp4" type="video/mp4">
+  		</video>
+  		<audio id ="myaudio" controls>
+  			<source src="dhoni.mp3" type="audio/mp3">
+		</audio>
+	</div> 
+	<script>
+  			var vid = document.getElementById("myvideo");
+  			var aud = document.getElementById("myaudio");
+  			function playvideo() {
+  				if (vid.paused) {
+  			        vid.play(); 
+  				}
+  				aud.pause()
+  			}
+  			function playaudio() {
+  				if (aud.paused) {
+  			        aud.play(); 
+  				}
+  				vid.pause()
+  			}
+  	</script>
+</body>
+</html>

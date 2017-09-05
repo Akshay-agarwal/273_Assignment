@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GeoLocation</title>
+	<script>
+		if (navigator.geolocation) {
+			window.onload = function () {
+				var startPos;
+			  	navigator.geolocation.getCurrentPosition(function(position) {
+			    		startPos = position;
+			    		document.getElementById('latStart').innerHTML = startPos.coords.latitude;
+			    		document.getElementById('lonStart').innerHTML = startPos.coords.longitude;
+				}, function(error) {
+					alert('Error has occurred with Error code' + error.code);
+				});
+			};
+		}	else {
+			alert('Geo location is not supported on this browser yet.')
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<p>
+			Current Point (lat,lon):<br/>
+			<span id="latStart">???</span>,<span id="lonStart">???</span>
+		</p>
+	</div>
+</body>
+</html>
