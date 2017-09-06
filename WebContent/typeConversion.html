@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	function calcAverage()
+	{
+		var s1 = document.getElementById("s1").value;
+		var s2 = document.getElementById("s2").value;
+		var s3 = document.getElementById("s3").value;
+		var s4 = document.getElementById("s4").value;
+		var s5 = document.getElementById("s5").value;
+	    var average = (parseInt(s1) + parseInt(s2) + parseInt(s3) + parseInt(s4) + parseInt(s5))/5;
+	    document.getElementById("tot").innerHTML = "The class average is: " + average;  
+	}
+	</script>
+</head>
+<body>
+	<p>Average of the class</p>
+	Enter score of Student 1<input type="text" id="s1"><br>
+	Enter score of Student 2<input type="text" id="s2"><br>
+	Enter score of Student 3<input type="text" id="s3"><br>
+	Enter score of Student 4<input type="text" id="s4"><br>
+	Enter score of Student 5<input type="text" id="s5"><br>
+	<input type="button" value="average" onclick="calcAverage()"> 
+	<p>The total is </p>
+	<p id="tot"></p>
+</body>
+</html>
