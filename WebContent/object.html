@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Object</title>
+	<script>
+		function Person(nameOfPerson) {
+			this.name = nameOfPerson;
+			this.info = 'Name of the person is' + this.name;
+			this.showInfo = function () {
+				alert(this.info);
+			}
+			this.greet = function () {
+				alert("Hi" + this.name);
+			}
+		}
+		var p1 = new Person('Akshay');
+	</script>
+</head>
+<body>
+	<input type = "button" value="Show details" onclick="p1.showInfo()"/>
+	<input type = "button" value="Greet" onclick="p1.greet()"/>
+</body>
+</html>

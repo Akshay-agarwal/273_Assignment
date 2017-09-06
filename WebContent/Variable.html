@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Variable</title>
+	<script type="text/javascript">
+		function fp()	{
+			var price = document.getElementById("price").value;
+			var finalPrice = Number(price) + ((9/100) * price);
+			document.getElementById("fin").innerHTML = finalPrice;
+		}
+	</script>
+</head>
+<body>
+	<input type="number" id="price">
+	<input type="button" value="total" onclick="fp()">
+	<p id="para">Price with tax is</p>
+	<p id="fin"></p>
+</body>
+</html>

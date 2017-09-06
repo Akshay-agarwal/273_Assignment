@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Display Full Name</title>
+	<script>
+		function fullName() {
+			var fName = document.getElementById("firstName").value;
+			var lName = document.getElementById("lastName").value;
+			document.getElementById("result").innerHTML = fName + lName;  
+		}
+	</script>
+</head>
+<body>
+	<p>Display Full Name</p>
+	<input type="text" id="firstName"><br>
+	<input type="text" id="lastName"><br>
+	<input type="button" id="add" value="add" onclick="fullName()"> 
+	<p> The Name is</p>
+	<p id="result"><p> 
+</body>
+</html>
