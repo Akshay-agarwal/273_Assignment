@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Teams</title>
+	<script>
+	var teams = [];
+		function teamAdd() 	{
+			var val = document.getElementById("team").value;
+			teams.push(val);
+			document.getElementById("message").innerHTML = "New team has been added";
+		}
+		function allTeams()	{
+			s = ""
+			for (var i=0; i<teams.length; i++) {
+				s += (i+1).toString() + '.' + teams[i];
+			}
+			document.getElementById("message").innerHTML = s;
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>Enter team Name :</td>
+			<td><input type="text" id="team"/></td>
+		</tr>
+		<tr>
+		<td><input type="button" name="add" value="Add" id="addTeam" onclick="teamAdd()"></td>
+		</tr>
+		<tr>
+		<td><input type="button" name="show" value="ShowAll" id="showAll" onclick="allTeams()"></td>
+		</tr>
+	</table>
+	<p id="message"><p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CG to Grade Converter</title>
+	<script>
+		function getGrade() {
+			var cg = Number(document.getElementById("cg").value);
+			var grade = document.getElementById("grade");
+			
+			if  (cg == 4) {
+				document.getElementById("grade").value = "A";
+			}
+			else if (cg > 3.66 && cg < 4) {
+				document.getElementById("grade").value = "A-";
+			}
+			else if (cg > 3.33 && cg < 3.66) {
+				document.getElementById("grade").value = "B+";
+			}
+			else if (cg > 3  && cg < 3.33) {
+				document.getElementById("grade").value = "B";
+			}
+			else if (cg > 2.77 && cg < 3) {
+				document.getElementById("grade").value = "B-";
+			}
+			else {
+				document.getElementById("grade").value = "C";
+			}
+		}
+	</script>
+</head>
+<body>
+	<label for="cg"> CG : </label>
+	<input type ="number" id="cg" onchange="getGrade()" /><br></br>
+	<label for="grade">Grade:</label>
+	<input type="text" id="grade">
+</body>
+</html>
