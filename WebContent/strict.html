@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Strict Mode</title>
+	<script type="text/javascript">
+	'use strict';
+	function strict()
+	{
+		var val="Only Display declared variables";
+		var out = document.getElementById('p1');
+		out.innerHTML = val;
+	}
+	val="Undeclare Variables";
+	document.getElementById('p1').innerHTML=val;
+	
+	</script>
+</head>
+<body onload="strict()">
+	<p id="p1"></p>
+</body>
+</html>
