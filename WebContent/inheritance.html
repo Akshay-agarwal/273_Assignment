@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Family Names</title>
+</head>
+<script type="text/javascript">
+	function Father(){
+		this.familyName = "Agarwal";
+		this.name = "Prakash";
+	}
+	
+	function son(){
+		this.name = "akshay";
+	}
+	
+	son.prototype = new Father();
+	var so = new son();
+	var fa = new Father();
+	son.prototype.familyName = (so.familyName);
+	
+	function fatherDetails(){
+		document.getElementById("familyName").innerHTML= "Father's Last Name is : "+fa.familyName;
+		document.getElementById("name").innerHTML= "Father's Name is : "+fa.name;
+	}
+	function sonDetails(){
+		document.getElementById("familyName").innerHTML= "Son's Last Name is : "+so.familyName;
+		document.getElementById("name").innerHTML= "Son's Name is : "+so.name;
+	
+	}
+	</script>
+<body>
+	<H3>Inheritance</H3>
+		<input type ="button" value="Click Here for Father's Details" onclick="fatherDetails()"/>
+		<input type ="button" value="Click Here for Son's Details" onclick="sonDetails()"/>
+	<hr>
+	<div id="familyName"></div>
+	<div id="name"></div>
+</body>
+</html>

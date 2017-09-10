@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>RegEx</title>
+</head>
+<body>
+	<input type="text" id="txt" />
+	<br></br>
+	<input type = "button" value="GetNumbers" id="Get Numbers" onclick="getDigits()">
+	<br></br>
+	<textarea id = "txtArea"rows="4" cols="20"></textarea>
+	<script>
+		function getDigits() {
+			document.getElementById("txtArea").value = "";
+			var inputStr = document.getElementById("txt").value;
+			var outStr = inputStr.match(/\d+/g);
+			if (outStr != null) 
+			{
+				for (var i = 0; i<outStr.length; i++) {
+					document.getElementById("txtArea").value += outStr[i] + "\r\n";
+				}
+			}
+		}
+	</script>
+</body>
+</html>
