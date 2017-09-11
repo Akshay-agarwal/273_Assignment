@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Parsing JSON</title>
+		<script>
+			function parse() {
+				var inStr = prompt("Enter JSON object");
+				var out = "";
+				obj = JSON.parse(inStr);
+				for (i in obj) {
+					out += "Property: " + i + " = " + obj[i] + '\n';
+				}
+				alert(out);
+			}
+		</script>
+	</head>
+	<body onload="parse()">
+	</body>
+</html>
